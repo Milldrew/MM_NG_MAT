@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-form-field {
+  width: 300px;
+}
+.signup-form {
+  width: 300px;
+}
