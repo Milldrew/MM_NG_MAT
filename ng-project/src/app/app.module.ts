@@ -1,4 +1,6 @@
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +15,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { TrainingComponent } from './training/training/training.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,14 @@ import { AppRoutingModule } from './app-routing.module';
     SignUpComponent,
   ],
   imports: [
+    FormsModule,
+    MatInputModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
