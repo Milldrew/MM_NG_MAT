@@ -1,3 +1,4 @@
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -16,6 +17,7 @@ import { TrainingComponent } from './training/training/training.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { FormsModule } from '@angular/forms';
     SignUpComponent,
   ],
   imports: [
+    MatNativeDateModule,
+    MatDatepickerModule,
     FormsModule,
     MatInputModule,
     AppRoutingModule,

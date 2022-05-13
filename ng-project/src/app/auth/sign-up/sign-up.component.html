@@ -29,6 +29,20 @@
         pwInput.value?.length >= 6 ? "" : "Must be 6 characters long."
       }}</mat-hint>
     </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input
+        [(ngModel)]="signUpDto.birthdate"
+        name="birthdate"
+        matInput
+        [matDatepicker]="picker"
+        input="birthdate"
+        [max]="maxDate"
+      />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
     <button type="submit" mat-raised-button color="primary">Submit</button>
   </form>
   <p>email: {{ signUpDto | json }}</p>

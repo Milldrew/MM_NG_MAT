@@ -9,11 +9,17 @@ export class SignUpComponent implements OnInit {
   signUpDto = {
     email: '',
     password: '',
+    birthdate: '',
   };
+  maxDate: any;
   constructor() {}
   onSubmit() {
     alert(JSON.stringify(this.signUpDto));
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.maxDate = new Date();
+    this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
+    console.log(this.maxDate);
+  }
 }
