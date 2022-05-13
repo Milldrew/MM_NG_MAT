@@ -11,6 +11,9 @@ export class SignUpComponent implements OnInit {
     password: '',
   };
   constructor() {}
+  onSubmit() {
+    alert(JSON.stringify(this.signUpDto));
+  }
 
   ngOnInit(): void {}
 }

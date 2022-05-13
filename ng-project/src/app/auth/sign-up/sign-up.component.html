@@ -1,5 +1,5 @@
 <section class="signup-form">
-  <form>
+  <form (ngSubmit)="onSubmit()">
     <mat-form-field>
       <input
         [(ngModel)]="signUpDto.email"
