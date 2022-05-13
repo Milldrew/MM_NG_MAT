@@ -2,15 +2,17 @@
   <form>
     <mat-form-field>
       <input
-        [(ngModel)]="email"
+        [(ngModel)]="signUpDto.email"
         type="email"
+        name="email"
         matInput
         placeholder="Your email"
       />
     </mat-form-field>
     <mat-form-field>
       <input
-        [(ngModel)]="password"
+        [(ngModel)]="signUpDto.password"
+        name="password"
         type="password"
         matInput
         placeholder="Your password"
@@ -18,4 +20,5 @@
     </mat-form-field>
     <button type="submit" mat-raised-button color="primary">Submit</button>
   </form>
+  <p>email: {{ signUpDto | json }}</p>
 </section>
